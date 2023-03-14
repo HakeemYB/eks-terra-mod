@@ -15,3 +15,7 @@ variable "subnet_ids" {
 variable "node_group_name" {
   default  = "eksnodegroup"
 }
+
+variable "instance_types" {
+  default  = ["t2.small"]
+}

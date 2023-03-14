@@ -8,6 +8,8 @@ resource "aws_eks_node_group" "eksnode" {
   node_role_arn   = aws_iam_role.eksnoderole.arn
   subnet_ids      = "${var.subnet_ids}"
 
+  instance_types = "${var.instance_types}"
+
   scaling_config {
     desired_size = 2
     max_size     = 2
