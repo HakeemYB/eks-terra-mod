@@ -7,6 +7,8 @@ resource "aws_eks_node_group" "eksnode" {
   node_group_name = "eksnodegroup"
   node_role_arn   = aws_iam_role.eksnoderole.arn
   subnet_ids      = "${var.subnet_ids}"
+
+  capacity_type  = "ON_DEMAND"
   instance_types = [ "t2.small" ]
   scaling_config {
     desired_size = 2
