@@ -4,12 +4,10 @@
 
 resource "aws_eks_node_group" "eksnode" {
   cluster_name    = var.eks_cluster
-  node_group_name = "${var.node_group_name}"
+  node_group_name = "eksnodegroup"
   node_role_arn   = aws_iam_role.eksnoderole.arn
   subnet_ids      = "${var.subnet_ids}"
-
-  instance_types = "${var.instance_types}"
-
+  instance_types = [ "t2.small" ]
   scaling_config {
     desired_size = 2
     max_size     = 2
