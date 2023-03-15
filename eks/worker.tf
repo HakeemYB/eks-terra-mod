@@ -3,7 +3,7 @@
 #-------------------------
 
 resource "aws_eks_node_group" "eksnode" {
-  cluster_name    = var.eks_cluster
+  cluster_name    = "${var.cluster_name}"
   node_group_name = "eksnodegroup"
   node_role_arn   = aws_iam_role.eksnoderole.arn
   subnet_ids      = "${var.subnet_ids}"

@@ -1,4 +1,4 @@
-variable "eks_cluster" {
+variable "cluster_name" {
   type     = string
   default  = "eksclusterdemo"
 }
