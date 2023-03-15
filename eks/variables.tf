@@ -9,7 +9,7 @@ variable "region" {
 }
 
 variable "subnet_ids" {
-  default  = ["subnet-00a8da1ab1e397a8a", "subnet-033f90ff2b636f5d3"]
+  default  = ["subnet-0569e9c49e283c039", "subnet-0fdef59f4c8f3829e"]
 }
 
 variable "instance_types" {
